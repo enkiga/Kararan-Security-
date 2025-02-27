@@ -1,11 +1,13 @@
 const express = require("express");
 const app = express();
 const path = require("path");
+const ejsLayouts = require("express-ejs-layouts");
 
 // Set EJS as template engine
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
-
+app.set("layout", "layouts/layout"); // default layout
+app.use(ejsLayouts);
 // Serve static files
 app.use(express.static(path.join(__dirname, "public")));
 
@@ -15,7 +17,7 @@ app.use((req, res, next) => {
   const day = now.getDay();
   const hour = now.getHours();
 
-  if (day >= 1 && day <= 5 && hour >= 9 && hour < 23) {
+  if (day >= 1 && day <= 5 && hour >= 9 && hour <= 17) {
     next();
   } else {
     res.send(
