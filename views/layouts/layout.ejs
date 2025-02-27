@@ -4,12 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Express Website</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <title>Kararan Security</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 
 <body>
-    <nav>
+    <nav class="layoutNav">
+        <a href="/" class="logo">
+            <img src="/images/logo.png" alt="Kararan Security Logo">
+        </a>
         <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/services">Our Services</a></li>
@@ -20,6 +23,11 @@
     <div class="container">
         <%- body %>
     </div>
+
+    <footer>
+        <!-- get current year -->
+        <p>&copy; <%= new Date().getFullYear() %> Kararan Security</p>
+    </footer>
 </body>
 
 </html>
