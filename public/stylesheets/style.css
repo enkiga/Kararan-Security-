@@ -159,3 +159,50 @@ footer{
     }
   }
 }
+
+.servicesSection{
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+
+  .services {
+    display: flex;
+    flex-direction: column;
+
+    h1{
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--primary-color);
+      font-family: var(--heading-font);
+      text-align: center;
+    }
+
+    .service{
+      display: flex;
+      align-items: start;
+      justify-content: start;
+      gap: 1rem;
+      margin-top: 2rem;
+
+      img{
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+      }
+
+      h2{
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--primary-color);
+        font-family: var(--heading-font);
+      }
+
+      p{
+        font-size: 1rem;
+        font-weight: 400;
+        color: var(--text-color);
+        text-align: justify;
+      }
+    }
+  }
+}
